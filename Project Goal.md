@@ -35,3 +35,4 @@ Diagnose best classifier of trials and associated hyperparameters.
 
 References:
 https://keras.io/examples/cifar10_cnn/
+https://github.com/aws-samples/amazon-sagemaker-architecting-for-ml/blob/master/Writeups/Deep%20Learning.md
