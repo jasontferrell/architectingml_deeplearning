@@ -32,3 +32,6 @@ Sensitivity to seeds?
 
 # End Goal
 Diagnose best classifier of trials and associated hyperparameters.
+
+References:
+https://keras.io/examples/cifar10_cnn/
