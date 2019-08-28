@@ -49,16 +49,16 @@ test_data = np.load(os.path.join(env.channel_dirs['test'], 'cifar-10-npz-compres
 
 
 model = Sequential()
-model.add(Conv2D(32, (5, 5), padding='same', input_shape=x_train.shape[1:]))
+model.add(Conv2D(32, (3, 3), padding='same', input_shape=x_train.shape[1:]))
 model.add(Activation('relu'))
-model.add(Conv2D(32, (5, 5)))
+model.add(Conv2D(32, (3, 3)))
 model.add(Activation('relu'))
 model.add(MaxPooling2D(pool_size=(2, 2)))
 model.add(Dropout(0.25))
 
-model.add(Conv2D(64, (3, 3), padding='same'))
+model.add(Conv2D(64, (4, 4), padding='same'))
 model.add(Activation('relu'))
-model.add(Conv2D(64, (3, 3)))
+model.add(Conv2D(64, (2, 2)))
 model.add(Activation('relu'))
 model.add(MaxPooling2D(pool_size=(2, 2)))
 model.add(Dropout(0.25))
@@ -66,6 +66,10 @@ model.add(Dropout(0.25))
 #can add additional layers here
 #either converge or oscillate
 model.add(Flatten())
+model.add(Dense(512))
+model.add(Activation('relu'))
+model.add(Dense(128))
+model.add(Activation('relu'))
 model.add(Dense(512))
 model.add(Activation('relu'))
 model.add(Dropout(0.5))
